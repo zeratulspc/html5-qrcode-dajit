@@ -472,7 +472,7 @@ export class Html5QrcodeScanner {
     private createBasicLayout(parent: HTMLElement) {
         parent.style.position = "relative";
         parent.style.padding = "0px";
-        parent.style.border = "1px solid silver";
+        //parent.style.border = "1px solid silver";
         this.createHeader(parent);
 
         const qrCodeScanRegion = document.createElement("div");
@@ -516,7 +516,7 @@ export class Html5QrcodeScanner {
         dashboard.appendChild(header);
 
         let libraryInfo = new LibraryInfoContainer();
-        libraryInfo.renderInto(header);
+        //libraryInfo.renderInto(header);
 
         const headerMessageContainer = document.createElement("div");
         headerMessageContainer.id = this.getHeaderMessageContainerId();
@@ -749,9 +749,10 @@ export class Html5QrcodeScanner {
         const cameraActionContainer = document.createElement("span");
         const cameraActionStartButton
             = BaseUiElementFactory.createElement<HTMLButtonElement>(
-                "button", PublicUiElementIdAndClasses.CAMERA_START_BUTTON_ID);
+            "button", PublicUiElementIdAndClasses.CAMERA_START_BUTTON_ID);
         cameraActionStartButton.innerText
             = Html5QrcodeScannerStrings.scanButtonStartScanningText();
+        cameraActionStartButton.style.padding = "10px 20px";
         cameraActionContainer.appendChild(cameraActionStartButton);
 
         const cameraActionStopButton
@@ -760,6 +761,7 @@ export class Html5QrcodeScanner {
         cameraActionStopButton.innerText
             = Html5QrcodeScannerStrings.scanButtonStopScanningText();
         cameraActionStopButton.style.display = "none";
+        cameraActionStopButton.style.padding = "10px 20px";
         cameraActionStopButton.disabled = true;
         cameraActionContainer.appendChild(cameraActionStopButton);
 

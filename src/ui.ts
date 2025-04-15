@@ -30,7 +30,6 @@ class LibraryInfoDiv {
         this.infoDiv.style.zIndex = "2";
         this.infoDiv.style.display = "none";
         this.infoDiv.style.padding = "5pt";
-        this.infoDiv.style.border = "1px solid #171717";
         this.infoDiv.style.fontSize = "10pt";
         this.infoDiv.style.background = "rgb(0 0 0 / 69%)";
         this.infoDiv.style.borderRadius = "5px";
@@ -40,7 +39,7 @@ class LibraryInfoDiv {
 
         this.infoDiv.innerText = LibraryInfoStrings.poweredBy();
         const projectLink = document.createElement("a");
-        projectLink.innerText = "ScanApp";
+        projectLink.innerText = "Dajit ScanApp";
         projectLink.href = "https://scanapp.org";
         projectLink.target = "new";
         projectLink.style.color = "white";
